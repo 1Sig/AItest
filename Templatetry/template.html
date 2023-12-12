@@ -17,16 +17,16 @@
     <div class="grid-item">Column 3</div>
   </div>
 
-<script>
-  function updateClock() {
-      var now = new Date();
-      var options = { timeZone: 'Europe/Paris', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-      var timeString = now.toLocaleTimeString('en-US', options);
-      document.getElementById('clock').textContent = timeString;
-  }
+  <script>
+    function updateClock() {
+        var now = new Date();
+        var options = { hour: 'numeric', minute: 'numeric', hour12: false };
+        var timeString = now.toLocaleTimeString('en-US', options);
+        document.getElementById('clock').textContent = timeString;
+    }
 
-  setInterval(updateClock, 1000);
-  updateClock(); // Initial call to display the time immediately
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display the time immediately
 </script>
 
 </body>
